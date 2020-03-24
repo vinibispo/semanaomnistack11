@@ -3,7 +3,7 @@ const crypto = require('crypto')
 const connection = require('../database/index')
 
 module.exports = {
-    list:async(req, res)=>{
+    index:async(req, res)=>{
         const ongs = await connection('ongs').select('*')
         return res.json(ongs)
     },
